@@ -57,7 +57,6 @@ nav a:hover {
 }
 .contacts-block h2 {
     color: #111;
-
 }
 
 .contacts-block a {
@@ -98,6 +97,10 @@ main {
     width: 100%;
     text-align: left;
     margin-bottom: 20px;
+}
+.about-block h2 {
+    font-size: 25px;
+    font-weight: 700;
 }
 .about-block ul {
     display: grid;
