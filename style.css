@@ -6,21 +6,23 @@
 body {
     background-color: #f5f5f5;
     font-family: 'Inter', sans-serif;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
 }
 
 header {
     background-color: white;
     padding: 20px 40px;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 .logo {
     color: #111;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 25px;
-    font-weight: 600;
 }
 .logo span {
     color: blue;
@@ -28,12 +30,12 @@ header {
 
 nav {
     display: flex;
-    gap: 20px;
+    gap: 25px;
 }
 nav a {
     color: #111;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 400;
     transition: 350ms;
 }
 nav a:hover {
@@ -43,16 +45,15 @@ nav a:hover {
 }
 
 .contacts-block {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     padding: 20px;
-    width: 250px;
+    width: 300px;
     background-color: white;
     border: 1px solid #333;
     border-radius: 10px;
     text-align: center;
     margin-top: 10px;
-    gap: 7px;
+    gap: 10px;
 }
 .contacts-block h2 {
     color: #111;
@@ -68,23 +69,29 @@ nav a:hover {
     transition:750ms;
 }
 .contacts-block a:hover {
-    color: #800032;
+    color: #111;
+    text-shadow: 0.2px 0 0 #111, -0.2px 0 0 #111;
     background-color: #ddd;
 }
 
 main {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    margin-top: 100px;
+    max-width: 900px;
     padding: 50px;
-    flex-direction: column;
-    align-items: center;
-    background-color: white;
+    align-items: start;
+    background-color: white; 
     border: 1px solid #ccc;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     border-radius: 20px;
+    justify-self: center;
+    align-self: center;
+}
+.left-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
 }
 .about-block {
     max-width: 600px;
@@ -93,25 +100,40 @@ main {
     margin-bottom: 20px;
 }
 .about-block ul {
+    display: grid;
     padding-left: 20px;
     margin-top: 5px;
     color: #333;
+    gap: 5px;
+}
+.requisition {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.requisition a {
+    display: flex;
+    text-decoration: none;
+    background-color: #111;
+    color: white;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 15px;
+    transition: 450ms;
+}
+.requisition a:hover {
+    background-color: #070b0e;
+    text-shadow: 0.2px 0 0 #eee, -0.2px 0 0 #eee;
 }
 footer {
     display: flex;
     padding: 25px 40px;
     align-items: center;
     background-color: white;
-    display: flex;
     justify-content: space-between;
     color: #111;
-    align-items: center;
     font-size: 16px;
-    position:fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 999;
+    width: 100%;
 }
 
 .footer-links{
